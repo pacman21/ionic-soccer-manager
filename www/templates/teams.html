@@ -1,0 +1,22 @@
+<ion-view view-title="Manage Teams">
+  <ion-content>
+    <p class='item item-body'>Begin by creating a team. After you create your team, you will be able to
+      add players to your team, and use other features of the app via the navigation 
+      in the top left that will appear after you select/create your team.</p>
+    <form class="create_team" ng-submit="createTeam()">
+      <label class="item item-input">
+        <span class="input-label">Team Name</span>
+        <input type="text" ng-model="teamData.teamName"/>
+      </label>
+     <button class="button button-block button-balanced">
+        Create Team
+      </button>
+    </form>
+    <h4 class="title-item">Select Already Created Team</h4>
+    <ion-list> 
+      <ion-item ng-repeat="team in teamData" href="#/app/addPlayers/{{team.team_id}}">
+        {{team.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

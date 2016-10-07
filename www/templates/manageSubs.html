@@ -1,0 +1,27 @@
+<ion-view view-title="{{$root.title}}" cache-view="false">
+  <ion-content>
+    <div class="subpage col-md-10">
+      <div class='column' ng-repeat="r in [1, 2, 3, 4, 5, 6, 7]">
+        <div class="slot circle c{{c}}r{{r}}" ng-repeat="c in [1, 2, 3, 4, 5, 6, 7]">
+          <div class='active_player_holder' ng-click="subInOut({{r}}, {{c}}, $event)" 
+              data-player-id='{{$root.activePlayers[r][c].playerID}}'>
+            <div style="display: table; height: 100%; width: 100%">
+              <div style="display: table-cell; vertical-align: middle; width: 100%;">
+                <div class='player_name'>{{$root.activePlayers[r][c].playerName}}</div>
+                <div class='date_entered'>{{$root.activePlayers[r][c].dateEntered}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="new-game-holder" ng-click="newHalf()">
+      <i class="ion-plus-round new-game"></i>
+    </div>
+  </ion-content>
+</ion-view>
+<style>
+  .scroll {
+    height: 100%;
+  }
+</style>

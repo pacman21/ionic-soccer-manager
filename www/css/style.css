@@ -1,0 +1,98 @@
+/* 
+Colors should always be: Gold: #FFC90E,Green: #2F5846; White: #FFFFFF
+*/
+/***Splash Page***/
+.splash-page > div.scroll {
+    height: 100%;
+    width: 100%;
+}
+.splash-page .splash-item {
+    height: 50%;
+    width: 100%;
+    display: table;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+}
+.splash-page .splash-item > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.splash-page .splash-item:first-child{
+    background-color: #2F5846;
+    color: #FFFFFF;
+}
+.splash-page .splash-item:last-child{
+    top: 50%;
+    color: #2F5846;
+    border-top: 5px solid #FFC90E;
+}
+/***End Splash Page***/
+
+form .item-input input, 
+form .item-input textarea {
+  width: 60%;
+}
+.player-item.item-content {
+  display: flex;
+  align-items: center;
+}
+.player-item.item-content > div {
+  flex: 0 50px;
+}
+.player-item.item-content > div i {
+  font-size: 24px;
+}
+.player-item.item-content > div.player-name{
+  flex: 1;
+}
+.title-item {
+  padding: 5px;
+}
+
+.subpage.col-md-10 {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(../img/halffield.png) no-repeat;
+  background-size: 100% 100%;
+}
+.subpage.col-md-10 > div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.subpage .slot {
+  border: 2px solid #000000;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}  
+.subpage .slot .active_player_holder {
+  position: absolute;
+  padding: 5%;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+}
+.item.bench {
+  background-color: #ddd;
+}
+.subpage .slot .active_player_holder .player_name,
+.subpage .slot .active_player_holder .date_entered {
+  text-align: center;
+  color: #000000;
+  background-color: #FFFF00;
+}
+.new-game-holder {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  font-size: 20px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 100%;
+  color: green;
+  z-index: 1000;
+}

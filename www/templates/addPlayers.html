@@ -1,0 +1,29 @@
+<ion-view view-title="Add/Remove Players" cache-view="false">
+  <ion-content>
+    <form class="create_team" ng-submit="createUpdatePlayer()">
+      <input type="hidden" ng-model="playerData.playerID"/>
+      <label class="item item-input">
+        <span class="input-label">Player Name</span>
+        <input type="text" ng-model="playerData.playerName"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Preferred Positions</span>
+        <input type="text" ng-model="playerData.prefPos"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Notes</span>
+        <textarea ng-model="playerData.notes"></textarea>
+      </label>
+      <button class="button button-block button-balanced">
+        Add Player
+      </button>
+    </form>
+    <div class='item'> 
+      <div class="item player-item item-content" ng-repeat="player in playerData" data-player-id="{{player.playerID}}">
+        <div class="player-name">{{player.playerName}}</div>
+        <div class="update-player" ng-click="editPlayer({{player.playerID}})"><i class="icon ion-edit"></i></div>
+        <div class="delete-player" ng-click="removePlayer({{player.playerID}})"><i class="icon ion-trash-a"></i></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
